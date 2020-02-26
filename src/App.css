@@ -3,7 +3,8 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  width: 400px;
+  height: 400px;
   pointer-events: none;
 }
 
@@ -26,6 +27,30 @@
 
 .App-link {
   color: #61dafb;
+}
+
+h1 {
+  font-family: Baloo;
+  font-size: 72px;
+  margin-top: -400px;
+  margin-bottom: 100px
+}
+
+h2 {
+  font-family: Baloo;
+  font-size: 54px;
+
+}
+
+button {
+  border-radius: 60px;
+  padding: 10px;
+  font-size: medium;
+  margin-left: 10px
+}
+
+button:hover {
+  background-color: salmon;
 }
 
 @keyframes App-logo-spin {

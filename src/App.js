@@ -7,8 +7,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Welcome to Chipotle!</h1>
-        <h2>Build Your Bowl</h2>
+        <h1>Welcome to Belle Peppers! 🌶</h1>
+        <h2> Build Your Bowl 🍲</h2>
       <FoodList/>
         
        

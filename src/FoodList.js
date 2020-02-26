@@ -40,7 +40,7 @@ removeFood(id){
                  <label htmlFor="task">Topping</label>
                  <input type="text" name="topping" id="topping" 
                  onChange={(e) => this.handleChange(e)}/>
-                 <button>Add Topping to Bowl!</button>
+                 <button>Add to Bowl!</button>
                  </form>
                 <ul>{myToppings}</ul>
             </div>
