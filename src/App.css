@@ -46,12 +46,31 @@ button {
   border-radius: 60px;
   padding: 10px;
   font-size: medium;
-  margin-left: 10px
+  margin-top: 10px
 }
 
 button:hover {
   background-color: salmon;
 }
+
+label {
+  font-size: 30px;
+  display: block;
+  text-align: center;
+  margin-right: 10px;
+  margin-bottom: 10px
+}
+
+input[type=text]{
+  width: 100%;
+  padding: 12px 20px;
+  font-size: 24px
+}
+
+input[type=text]:focus{
+background-color: rgb(217, 171, 231);
+}
+
 
 @keyframes App-logo-spin {
   from {

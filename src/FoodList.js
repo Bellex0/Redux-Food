@@ -37,7 +37,7 @@ removeFood(id){
         return(
             <div>
                  <form onSubmit = {(e) => this.handleSubmit(e)}>
-                 <label htmlFor="task">Topping</label>
+                 <label htmlFor="task">Enter Topping</label>
                  <input type="text" name="topping" id="topping" 
                  onChange={(e) => this.handleChange(e)}/>
                  <button>Add to Bowl!</button>
