@@ -1,23 +1,21 @@
 import React, { Component } from 'react';
 import Food from "./Food";
 import { connect } from "react-redux";
+import { addFood, removeFood } from './actionCreators';
 
 class FoodList extends Component {
 
 constructor(props){
     super(props)
-    // this.handleSubmit = this.handleSubmit.bind(this)
-    // this.handleChange = this.handleChange.bind(this)
+   
     this.state = {
         topping: ""
     }
 }
+
 handleSubmit(e){
     e.preventDefault()
-    this.props.dispatch({
-        type: "ADD_FOOD",
-        topping: this.state.topping 
-    })
+    this.props.addFood(this.state.topping)
     e.target.reset()
 }
 
@@ -28,10 +26,7 @@ handleChange(e){
 }
 
 removeFood(id){
-    this.props.dispatch({
-        type: "REMOVE_FOOD", 
-        id
-    })
+    this.props.removeFood(id)
 }
 
     render() {
@@ -41,10 +36,10 @@ removeFood(id){
          key={index}/>)
         return(
             <div>
-                 <form onSubmit = {() => this.handleSubmit}>
-                 <label> htmlFor="task">Topping</label>
+                 <form onSubmit = {(e) => this.handleSubmit(e)}>
+                 <label htmlFor="task">Topping</label>
                  <input type="text" name="topping" id="topping" 
-                 onChange={this.handleChange}/>
+                 onChange={(e) => this.handleChange(e)}/>
                  <button>Add Topping to Bowl!</button>
                  </form>
                 <ul>{myToppings}</ul>
@@ -60,6 +55,8 @@ function mapStateToProps(reduxState){
 }
 
 
-export default connect(mapStateToProps)(FoodList)
+
+
+export default connect(mapStateToProps, {addFood, removeFood} )(FoodList)
 
 
