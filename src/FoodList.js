@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
-import Food from "./Food"
+import Food from "./Food";
+import { connect } from "react-redux";
 
-export default class FoodList extends Component {
+class FoodList extends Component {
 
 constructor(props){
     super(props)
-    this.state = {
-        toppings: ["Fajita Veggies", "Brown Rice", "Corn"]
-    }
 }
     render() {
         let myToppings = this.state.toppings.map((topping, index) => (<Food topping={topping} key={index}/>))
@@ -18,5 +16,7 @@ constructor(props){
         )
     }
 }
+
+export default connect()(FoodList)
 
 
