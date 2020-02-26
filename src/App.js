@@ -1,20 +1,17 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import FoodList from './FoodList';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <h1>Welcome to Chipotle!</h1>
+        <h2>Build Your Bowl</h2>
+      <FoodList/>
         
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+       
       </header>
     </div>
   );
